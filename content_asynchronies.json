@@ -1,0 +1,163 @@
+[
+  {
+    "id": "double_trigger",
+    "title": "Dupla disparo",
+    "definition": "Dois ciclos ventilatorios consecutivos ocorrem com expiracao muito curta entre eles.",
+    "mechanism": "Geralmente reflete tempo inspiratorio neural maior que o tempo inspiratorio ofertado ou suporte insuficiente para a demanda do paciente.",
+    "clinical_clues": [
+      "demanda ventilatoria aumentada",
+      "esforco inspiratorio intenso",
+      "soma de volumes em ciclos consecutivos"
+    ],
+    "waveform_description": "Dois disparos quase contiguos com minima expiracao entre eles, sugerindo empilhamento de volume.",
+    "possible_corrections": [
+      "reavaliar tempo inspiratorio",
+      "reavaliar nivel de suporte e conforto",
+      "reavaliar a causa do alto drive respiratorio"
+    ],
+    "common_misinterpretations": [
+      "confundir com auto trigger",
+      "ignorar o risco de empilhamento de volume"
+    ],
+    "image_asset_url": "assets/asynchronies/double_trigger.svg",
+    "published": true
+  },
+  {
+    "id": "auto_trigger",
+    "title": "Auto trigger",
+    "definition": "O ventilador dispara sem esforco inspiratorio efetivo do paciente.",
+    "mechanism": "Pode decorrer de trigger muito sensivel, vazamento, agua no circuito, oscilacoes cardiogenicas ou ruido no sistema.",
+    "clinical_clues": [
+      "frequencia de disparos maior que o esperado",
+      "ciclos sem correlacao clinica aparente",
+      "volume minuto aparentemente elevado"
+    ],
+    "waveform_description": "Ciclos iniciados sem deflexao coerente de esforco inspiratorio ou com padrao repetitivo nao fisiologico.",
+    "possible_corrections": [
+      "reduzir sensibilidade excessiva do trigger",
+      "investigar vazamentos e condensado no circuito",
+      "correlacionar com exame clinico e monitorizacao"
+    ],
+    "common_misinterpretations": [
+      "confundir com dupla disparo",
+      "atribuir todos os disparos a esforco do paciente"
+    ],
+    "image_asset_url": "assets/asynchronies/auto_trigger.svg",
+    "published": true
+  },
+  {
+    "id": "ineffective_effort",
+    "title": "Esforco inefetivo",
+    "definition": "O paciente realiza esforco inspiratorio que nao consegue disparar o ventilador.",
+    "mechanism": "Frequentemente relacionado a auto_peep, trigger inadequado, sedacao, fraqueza muscular ou suporte mal ajustado.",
+    "clinical_clues": [
+      "taquipneia aparente com baixa frequencia registrada no ventilador",
+      "uso de musculatura acessoria",
+      "desconforto persistente"
+    ],
+    "waveform_description": "Pequenas deflexoes em pressao ou fluxo durante a expiracao sem geracao de ciclo ventilatorio.",
+    "possible_corrections": [
+      "investigar auto_peep",
+      "ajustar trigger de forma apropriada",
+      "reavaliar sedacao e carga resistiva"
+    ],
+    "common_misinterpretations": [
+      "interpretar como curva artefatual",
+      "nao perceber esforcos durante expiracao"
+    ],
+    "image_asset_url": "assets/asynchronies/ineffective_effort.svg",
+    "published": true
+  },
+  {
+    "id": "early_cycling",
+    "title": "Ciclagem precoce",
+    "definition": "A inspiracao mecanica termina antes do fim do esforco neural inspiratorio do paciente.",
+    "mechanism": "Mais comum em PSV quando a ciclagem ocorre cedo demais, levando a sensacao de suporte insuficiente e possivel novo esforco rapido.",
+    "clinical_clues": [
+      "fome de ar",
+      "esforco inspiratorio prolongado",
+      "possibilidade de dupla disparo funcional"
+    ],
+    "waveform_description": "Encerramento precoce do fluxo inspiratorio com persistencia de esforco do paciente apos a ciclagem.",
+    "possible_corrections": [
+      "reavaliar cycling percent em PSV",
+      "reavaliar oferta de suporte",
+      "correlacionar com drive respiratorio"
+    ],
+    "common_misinterpretations": [
+      "confundir com trigger inadequado",
+      "atribuir apenas a ansiedade"
+    ],
+    "image_asset_url": "assets/asynchronies/early_cycling.svg",
+    "published": true
+  },
+  {
+    "id": "late_cycling",
+    "title": "Ciclagem tardia",
+    "definition": "A inspiracao mecanica se prolonga alem do fim do esforco neural inspiratorio do paciente.",
+    "mechanism": "O ventilador mantem inspiracao quando o paciente ja iniciou tendencia expiratória, favorecendo desconforto e oposicao ao ciclo.",
+    "clinical_clues": [
+      "desconforto no final da inspiracao",
+      "tentativa de expiracao contra o ventilador",
+      "assincronia perceptivel em PSV"
+    ],
+    "waveform_description": "Fluxo inspiratorio prolongado com sinais de termino tardio do ciclo em relacao ao esforco do paciente.",
+    "possible_corrections": [
+      "reavaliar cycling percent",
+      "reavaliar tempo inspiratorio ofertado",
+      "ajustar suporte ao padrao do paciente"
+    ],
+    "common_misinterpretations": [
+      "confundir com flow starvation",
+      "ignorar o tempo neural do paciente"
+    ],
+    "image_asset_url": "assets/asynchronies/late_cycling.svg",
+    "published": true
+  },
+  {
+    "id": "flow_starvation",
+    "title": "Flow starvation",
+    "definition": "O fluxo inspiratorio ofertado e insuficiente para a demanda do paciente.",
+    "mechanism": "O paciente tenta inspirar mais rapido ou mais intensamente do que o ventilador oferece, gerando curva de pressao ou fluxo sugestiva de fome de fluxo.",
+    "clinical_clues": [
+      "desconforto inspiratorio",
+      "alto drive respiratorio",
+      "uso de musculatura acessoria"
+    ],
+    "waveform_description": "Curva compativel com demanda inspiratoria superior a oferta, frequentemente com deformacao durante a inspiracao.",
+    "possible_corrections": [
+      "reavaliar fluxo inspiratorio ou rise time",
+      "reavaliar suporte global",
+      "investigar causa do alto drive respiratorio"
+    ],
+    "common_misinterpretations": [
+      "confundir com ansiedade isolada",
+      "nao correlacionar a curva com a clinica"
+    ],
+    "image_asset_url": "assets/asynchronies/flow_starvation.svg",
+    "published": true
+  },
+  {
+    "id": "auto_peep",
+    "title": "Auto PEEP e esforco inefetivo",
+    "definition": "Presenca de pressao expiratória residual ao final da expiracao, que pode dificultar o disparo e favorecer esforcos inefetivos.",
+    "mechanism": "Resulta de tempo expiratorio insuficiente, obstrucao ao fluxo expiratorio ou hiperinsuflacao dinamica.",
+    "clinical_clues": [
+      "DPOC ou asma",
+      "expiracao prolongada",
+      "dificuldade de disparo"
+    ],
+    "waveform_description": "Fluxo expiratorio que nao retorna adequadamente a linha de base antes do proximo ciclo, associado ou nao a esforcos nao disparados.",
+    "possible_corrections": [
+      "reavaliar tempo expiratorio",
+      "reavaliar FR e outras configuracoes que encurtem expiracao",
+      "investigar obstrucao e dinamica expiratória"
+    ],
+    "common_misinterpretations": [
+      "nao perceber expiracao incompleta",
+      "tratar apenas o trigger sem abordar a causa"
+    ],
+    "image_asset_url": "assets/asynchronies/auto_peep.svg",
+    "published": true
+  }
+]

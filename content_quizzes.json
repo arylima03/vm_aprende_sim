@@ -1,0 +1,152 @@
+[
+  {
+    "id": "quiz_001",
+    "module_id": "casos_quiz",
+    "scenario_id": "sdra_vcv_basico",
+    "question_text": "Em um cenario didatico de SDRA com VCV e VT protetor, qual e o objetivo central da configuracao inicial?",
+    "options": [
+      "Maximizar volume corrente",
+      "Priorizar estrategia protetora",
+      "Eliminar totalmente a necessidade de reavaliacao",
+      "Usar FiO2 minima sem monitorizacao"
+    ],
+    "correct_option_index": 1,
+    "commentary": "No cenario educacional de SDRA, o foco inicial e ventilacao protetora com reavaliacao continua de pressao, oxigenacao e resposta global.",
+    "published": true
+  },
+  {
+    "id": "quiz_002",
+    "module_id": "casos_quiz",
+    "scenario_id": "dpoc_psv_basico",
+    "question_text": "Qual combinacao merece atencao especial em DPOC ou asma no treino de sincronizacao em PSV?",
+    "options": [
+      "Auto PEEP e esforco inefetivo",
+      "FiO2 isoladamente",
+      "PEEP zero em todos os casos",
+      "Ausencia completa de trigger"
+    ],
+    "correct_option_index": 0,
+    "commentary": "Em pacientes obstrutivos, a auto PEEP pode aumentar a carga para disparar o ventilador e favorecer esforcos inefetivos.",
+    "published": true
+  },
+  {
+    "id": "quiz_003",
+    "module_id": "casos_quiz",
+    "scenario_id": "pos_operatorio_pcv_basico",
+    "question_text": "Na PCV, qual parametro tem papel relevante na sensacao de pressurizacao e conforto?",
+    "options": [
+      "Rise time",
+      "Apenas FiO2",
+      "Somente nome do modo",
+      "Nenhum parametro"
+    ],
+    "correct_option_index": 0,
+    "commentary": "O rise time influencia a velocidade de pressurizacao e pode gerar desconforto quando muito curto ou inadequado ao perfil do paciente.",
+    "published": true
+  },
+  {
+    "id": "quiz_004",
+    "module_id": "casos_quiz",
+    "scenario_id": "sepse_vcv_basico",
+    "question_text": "No contexto didatico de sepse, qual afirmacao e mais adequada?",
+    "options": [
+      "FiO2 resolve todo o problema ventilatorio",
+      "A estrategia inicial deve integrar oxigenacao, ventilacao e reavaliacao frequente",
+      "As curvas nao tem utilidade",
+      "O trigger nunca precisa ser revisado"
+    ],
+    "correct_option_index": 1,
+    "commentary": "A proposta educacional da v1 enfatiza organizacao inicial coerente e revisao continua do suporte ventilatorio e das curvas.",
+    "published": true
+  },
+  {
+    "id": "quiz_005",
+    "module_id": "casos_quiz",
+    "scenario_id": "rebaixamento_vcv_basico",
+    "question_text": "Em um cenario de rebaixamento de consciencia, qual erro comum deve ser evitado no treinamento inicial?",
+    "options": [
+      "Usar volume excessivo sem reavaliacao",
+      "Observar curvas basicas",
+      "Revisar estrategia apos estabilizacao",
+      "Documentar o modo selecionado"
+    ],
+    "correct_option_index": 0,
+    "commentary": "Mesmo em configuracoes iniciais simples, o treino deve evitar volumes excessivos e reforcar reavaliacao das curvas e dos objetivos ventilatorios.",
+    "published": true
+  },
+  {
+    "id": "quiz_006",
+    "module_id": "casos_quiz",
+    "scenario_id": "dpoc_psv_basico",
+    "question_text": "Qual assincronia e definida por disparos do ventilador sem esforco inspiratorio efetivo do paciente?",
+    "options": [
+      "Dupla disparo",
+      "Auto trigger",
+      "Ciclagem tardia",
+      "Flow starvation"
+    ],
+    "correct_option_index": 1,
+    "commentary": "Auto trigger ocorre quando o ventilador dispara sem esforco real, por exemplo por trigger muito sensivel, vazamento ou oscilacao no circuito.",
+    "published": true
+  },
+  {
+    "id": "quiz_007",
+    "module_id": "casos_quiz",
+    "scenario_id": "dpoc_psv_basico",
+    "question_text": "Pequenas deflexoes durante a expiracao sem gerar ciclo ventilatorio sugerem qual padrao?",
+    "options": [
+      "Esforco inefetivo",
+      "Auto trigger",
+      "Ciclagem precoce",
+      "Dupla disparo"
+    ],
+    "correct_option_index": 0,
+    "commentary": "Esforco inefetivo traduz tentativa de inspiracao que nao vence a carga necessaria para disparar o ventilador.",
+    "published": true
+  },
+  {
+    "id": "quiz_008",
+    "module_id": "casos_quiz",
+    "scenario_id": "sdra_vcv_basico",
+    "question_text": "Dois ciclos consecutivos com expiracao minima entre eles sugerem principalmente:",
+    "options": [
+      "Auto PEEP isolada",
+      "Dupla disparo",
+      "Ciclagem tardia em PSV",
+      "FiO2 inadequada"
+    ],
+    "correct_option_index": 1,
+    "commentary": "A dupla disparo sugere desajuste entre tempo neural inspiratorio e tempo ofertado, com risco de empilhamento de volume.",
+    "published": true
+  },
+  {
+    "id": "quiz_009",
+    "module_id": "casos_quiz",
+    "scenario_id": "dpoc_psv_basico",
+    "question_text": "Em PSV, encerramento da inspiracao mecanica antes do fim do esforco neural do paciente corresponde a:",
+    "options": [
+      "Ciclagem precoce",
+      "Ciclagem tardia",
+      "Auto trigger",
+      "Sem relevancia clinica"
+    ],
+    "correct_option_index": 0,
+    "commentary": "A ciclagem precoce pode aumentar a sensacao de suporte insuficiente e favorecer novo esforco inspiratorio rapidamente apos o fim do ciclo.",
+    "published": true
+  },
+  {
+    "id": "quiz_010",
+    "module_id": "casos_quiz",
+    "scenario_id": "dpoc_psv_basico",
+    "question_text": "Fluxo expiratorio que nao retorna a linha de base antes do proximo ciclo, em contexto obstrutivo, sugere:",
+    "options": [
+      "Auto PEEP",
+      "Curva normal obrigatoria",
+      "Apenas artefato sem importancia",
+      "Dupla disparo obrigatoria"
+    ],
+    "correct_option_index": 0,
+    "commentary": "Esse padrao didatico e tipico de expiracao incompleta e ajuda a ensinar o conceito de hiperinsuflacao dinamica e auto PEEP.",
+    "published": true
+  }
+]

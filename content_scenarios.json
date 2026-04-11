@@ -1,0 +1,173 @@
+[
+  {
+    "id": "sdra_vcv_basico",
+    "module_id": "ajuste_inicial",
+    "title": "SDRA - estrategia protetora",
+    "category": "SDRA",
+    "difficulty": "basico",
+    "mode_default": "VCV",
+    "learning_goals": [
+      "entender ventilacao protetora",
+      "relacionar volume corrente e pressao",
+      "reconhecer papel didatico da PEEP"
+    ],
+    "initial_parameters": {
+      "fr": 20,
+      "vt_ml_kg_pbw": 6,
+      "peep": 10,
+      "fio2": 0.6,
+      "trigger": -2
+    },
+    "parameter_rationales": {
+      "fr": "mantem ventilacao minuto com VT protetor no contexto educacional",
+      "vt_ml_kg_pbw": "valor didatico de estrategia protetora",
+      "peep": "ajuda a discutir recrutamento e oxigenacao",
+      "fio2": "oferece margem inicial de seguranca no cenario didatico",
+      "trigger": "permite discutir conforto e interacao paciente ventilador"
+    },
+    "common_errors": [
+      "usar VT alto demais",
+      "negligenciar pressao de platô",
+      "subestimar a necessidade de reavaliar PEEP"
+    ],
+    "simulator_profile_id": "profile_sdra_vcv_v1",
+    "published": true
+  },
+  {
+    "id": "dpoc_psv_basico",
+    "module_id": "ajuste_inicial",
+    "title": "DPOC/asma - suporte com enfase em sincronizacao",
+    "category": "DPOC/asma",
+    "difficulty": "basico",
+    "mode_default": "PSV",
+    "learning_goals": [
+      "identificar risco de auto_peep",
+      "relacionar trigger e esforco inefetivo",
+      "reconhecer importancia da ciclagem em PSV"
+    ],
+    "initial_parameters": {
+      "peep": 5,
+      "fio2": 0.4,
+      "trigger": -1.5,
+      "rise_time": 0.2,
+      "cycling_percent": 40
+    },
+    "parameter_rationales": {
+      "peep": "permite discutir hiperinsuflacao dinamica e ajuste fino",
+      "fio2": "valor inicial didatico para suporte de oxigenacao",
+      "trigger": "ajuda a discutir disparo e auto_trigger",
+      "rise_time": "permite discutir conforto e pressurizacao",
+      "cycling_percent": "fundamental para estudar ciclagem precoce e tardia"
+    },
+    "common_errors": [
+      "trigger excessivamente sensivel",
+      "nao considerar auto_peep",
+      "ciclagem inadequada ao perfil expiratorio"
+    ],
+    "simulator_profile_id": "profile_dpoc_psv_v1",
+    "published": true
+  },
+  {
+    "id": "pos_operatorio_pcv_basico",
+    "module_id": "ajuste_inicial",
+    "title": "Pos operatorio - ventilacao controlada simples",
+    "category": "Pos operatorio",
+    "difficulty": "basico",
+    "mode_default": "PCV",
+    "learning_goals": [
+      "entender pressurizacao basica em PCV",
+      "relacionar Pinsp e volume entregue",
+      "reconhecer desconforto por rise time inadequado"
+    ],
+    "initial_parameters": {
+      "fr": 14,
+      "pinsp": 14,
+      "peep": 5,
+      "fio2": 0.4,
+      "trigger": -2,
+      "rise_time": 0.15
+    },
+    "parameter_rationales": {
+      "fr": "ponto inicial simples para ventilacao controlada",
+      "pinsp": "permite discutir entrega de suporte e complacencia",
+      "peep": "valor basal didatico",
+      "fio2": "permite discutir retirada progressiva de oxigenio",
+      "rise_time": "importante para conforto e morfologia da curva"
+    },
+    "common_errors": [
+      "rise time muito curto",
+      "pressurizacao insuficiente",
+      "falta de reavaliacao apos estabilizacao"
+    ],
+    "simulator_profile_id": "profile_posop_pcv_v1",
+    "published": true
+  },
+  {
+    "id": "sepse_vcv_basico",
+    "module_id": "ajuste_inicial",
+    "title": "Sepse - estrategia inicial controlada",
+    "category": "Sepse",
+    "difficulty": "basico",
+    "mode_default": "VCV",
+    "learning_goals": [
+      "organizar um ponto inicial de suporte ventilatorio",
+      "reconhecer necessidade de reavaliacao frequente",
+      "integrar oxigenacao e ventilacao no raciocinio didatico"
+    ],
+    "initial_parameters": {
+      "fr": 18,
+      "vt_ml_kg_pbw": 6,
+      "peep": 8,
+      "fio2": 0.5,
+      "trigger": -2
+    },
+    "parameter_rationales": {
+      "fr": "permite discutir ventilacao minuto inicial",
+      "vt_ml_kg_pbw": "mantem enfoque em protecao pulmonar",
+      "peep": "valor intermediario para discussao didatica",
+      "fio2": "suporte inicial sem depender de caso real",
+      "trigger": "apoia discussao de conforto e sincronizacao"
+    },
+    "common_errors": [
+      "focar apenas em FiO2",
+      "negligenciar protecao pulmonar",
+      "nao revisar curvas apos ajustes"
+    ],
+    "simulator_profile_id": "profile_sepse_vcv_v1",
+    "published": true
+  },
+  {
+    "id": "rebaixamento_vcv_basico",
+    "module_id": "ajuste_inicial",
+    "title": "Rebaixamento de consciencia - ventilacao inicial",
+    "category": "Rebaixamento de consciencia",
+    "difficulty": "basico",
+    "mode_default": "VCV",
+    "learning_goals": [
+      "definir configuracao inicial simples",
+      "entender monitorizacao basica de curvas",
+      "reconhecer necessidade de reavaliacao da estrategia"
+    ],
+    "initial_parameters": {
+      "fr": 16,
+      "vt_ml_kg_pbw": 6,
+      "peep": 5,
+      "fio2": 0.4,
+      "trigger": -2
+    },
+    "parameter_rationales": {
+      "fr": "valor inicial simples para ensino",
+      "vt_ml_kg_pbw": "mantem foco em ventilacao segura",
+      "peep": "valor basal para discussao didatica",
+      "fio2": "permite avaliar necessidade de ajuste posterior",
+      "trigger": "mantem possibilidade de discutir sincronizacao se houver esforco"
+    },
+    "common_errors": [
+      "usar volume excessivo",
+      "desconsiderar curvas basicas",
+      "nao revisar necessidade de mudanca de modo"
+    ],
+    "simulator_profile_id": "profile_rebaixamento_vcv_v1",
+    "published": true
+  }
+]

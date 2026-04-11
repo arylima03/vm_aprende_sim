@@ -1,0 +1,248 @@
+[
+  {
+    "id": "profile_sdra_vcv_v1",
+    "mode": "VCV",
+    "scenario_category": "SDRA",
+    "parameter_ranges": {
+      "fr": { "min": 10, "max": 35, "step": 1 },
+      "vt": { "min": 250, "max": 550, "step": 10 },
+      "peep": { "min": 5, "max": 18, "step": 1 },
+      "fio2": { "min": 0.21, "max": 1.0, "step": 0.01 },
+      "trigger": { "min": -5, "max": -0.5, "step": 0.5 }
+    },
+    "baseline_state": "vcv_sdra_baseline",
+    "waveform_states": [
+      {
+        "state_key": "vcv_sdra_baseline",
+        "priority": 1,
+        "conditions": { "vt": [320, 420], "peep": [8, 12] },
+        "pressure_asset": "wave_pressure_vcv_sdra_baseline",
+        "flow_asset": "wave_flow_vcv_sdra_baseline",
+        "volume_asset": "wave_volume_vcv_sdra_baseline",
+        "interpretation": "Padrao didatico de ventilacao controlada com estrategia protetora.",
+        "suspected_asynchrony": null
+      },
+      {
+        "state_key": "vcv_sdra_high_vt",
+        "priority": 5,
+        "conditions": { "vt": [430, 550] },
+        "pressure_asset": "wave_pressure_vcv_sdra_high_vt",
+        "flow_asset": "wave_flow_vcv_sdra_high_vt",
+        "volume_asset": "wave_volume_vcv_sdra_high_vt",
+        "interpretation": "Volume corrente acima do padrao protetor didatico, com tendencia a maiores pressões.",
+        "suspected_asynchrony": null
+      },
+      {
+        "state_key": "vcv_sdra_double_trigger_like",
+        "priority": 10,
+        "conditions": { "vt": [250, 420], "trigger": [-2, -0.5], "fr": [24, 35] },
+        "pressure_asset": "wave_pressure_vcv_sdra_double_trigger_like",
+        "flow_asset": "wave_flow_vcv_sdra_double_trigger_like",
+        "volume_asset": "wave_volume_vcv_sdra_double_trigger_like",
+        "interpretation": "Padrao didatico compativel com dupla disparo e empilhamento de volume.",
+        "suspected_asynchrony": "double_trigger"
+      },
+      {
+        "state_key": "vcv_sdra_flow_starvation_like",
+        "priority": 9,
+        "conditions": { "vt": [250, 360], "fr": [22, 35] },
+        "pressure_asset": "wave_pressure_vcv_sdra_flow_starvation_like",
+        "flow_asset": "wave_flow_vcv_sdra_flow_starvation_like",
+        "volume_asset": "wave_volume_vcv_sdra_flow_starvation_like",
+        "interpretation": "Padrao didatico de oferta insuficiente frente a alta demanda inspiratoria.",
+        "suspected_asynchrony": "flow_starvation"
+      }
+    ]
+  },
+  {
+    "id": "profile_dpoc_psv_v1",
+    "mode": "PSV",
+    "scenario_category": "DPOC/asma",
+    "parameter_ranges": {
+      "peep": { "min": 0, "max": 10, "step": 1 },
+      "fio2": { "min": 0.21, "max": 1.0, "step": 0.01 },
+      "trigger": { "min": -5, "max": -0.5, "step": 0.5 },
+      "rise_time": { "min": 0.05, "max": 0.5, "step": 0.05 },
+      "cycling_percent": { "min": 10, "max": 70, "step": 5 }
+    },
+    "baseline_state": "psv_dpoc_baseline",
+    "waveform_states": [
+      {
+        "state_key": "psv_dpoc_baseline",
+        "priority": 1,
+        "conditions": { "peep": [4, 6], "cycling_percent": [35, 45] },
+        "pressure_asset": "wave_pressure_psv_dpoc_baseline",
+        "flow_asset": "wave_flow_psv_dpoc_baseline",
+        "volume_asset": "wave_volume_psv_dpoc_baseline",
+        "interpretation": "Padrao didatico de suporte com foco em sincronizacao basica.",
+        "suspected_asynchrony": null
+      },
+      {
+        "state_key": "psv_dpoc_auto_trigger_like",
+        "priority": 10,
+        "conditions": { "trigger": [-1, -0.5] },
+        "pressure_asset": "wave_pressure_psv_dpoc_auto_trigger_like",
+        "flow_asset": "wave_flow_psv_dpoc_auto_trigger_like",
+        "volume_asset": "wave_volume_psv_dpoc_auto_trigger_like",
+        "interpretation": "Padrao didatico compativel com disparos sem esforco inspiratorio efetivo.",
+        "suspected_asynchrony": "auto_trigger"
+      },
+      {
+        "state_key": "psv_dpoc_early_cycling_like",
+        "priority": 9,
+        "conditions": { "cycling_percent": [45, 70] },
+        "pressure_asset": "wave_pressure_psv_dpoc_early_cycling_like",
+        "flow_asset": "wave_flow_psv_dpoc_early_cycling_like",
+        "volume_asset": "wave_volume_psv_dpoc_early_cycling_like",
+        "interpretation": "Padrao didatico de encerramento precoce do ciclo inspiratorio em relacao ao esforco do paciente.",
+        "suspected_asynchrony": "early_cycling"
+      },
+      {
+        "state_key": "psv_dpoc_late_cycling_like",
+        "priority": 8,
+        "conditions": { "cycling_percent": [10, 25] },
+        "pressure_asset": "wave_pressure_psv_dpoc_late_cycling_like",
+        "flow_asset": "wave_flow_psv_dpoc_late_cycling_like",
+        "volume_asset": "wave_volume_psv_dpoc_late_cycling_like",
+        "interpretation": "Padrao didatico de ciclagem tardia com prolongamento inspiratorio excessivo.",
+        "suspected_asynchrony": "late_cycling"
+      },
+      {
+        "state_key": "psv_dpoc_ineffective_effort_like",
+        "priority": 10,
+        "conditions": { "peep": [0, 3], "trigger": [-5, -3] },
+        "pressure_asset": "wave_pressure_psv_dpoc_ineffective_effort_like",
+        "flow_asset": "wave_flow_psv_dpoc_ineffective_effort_like",
+        "volume_asset": "wave_volume_psv_dpoc_ineffective_effort_like",
+        "interpretation": "Padrao didatico de esforcos nao disparados em contexto sugestivo de carga para trigger.",
+        "suspected_asynchrony": "ineffective_effort"
+      },
+      {
+        "state_key": "psv_dpoc_auto_peep_like",
+        "priority": 9,
+        "conditions": { "peep": [0, 4], "cycling_percent": [10, 35] },
+        "pressure_asset": "wave_pressure_psv_dpoc_auto_peep_like",
+        "flow_asset": "wave_flow_psv_dpoc_auto_peep_like",
+        "volume_asset": "wave_volume_psv_dpoc_auto_peep_like",
+        "interpretation": "Padrao didatico compativel com expiracao incompleta e hiperinsuflacao dinamica.",
+        "suspected_asynchrony": "auto_peep"
+      }
+    ]
+  },
+  {
+    "id": "profile_posop_pcv_v1",
+    "mode": "PCV",
+    "scenario_category": "Pos operatorio",
+    "parameter_ranges": {
+      "fr": { "min": 8, "max": 24, "step": 1 },
+      "pinsp": { "min": 8, "max": 24, "step": 1 },
+      "peep": { "min": 3, "max": 10, "step": 1 },
+      "fio2": { "min": 0.21, "max": 1.0, "step": 0.01 },
+      "trigger": { "min": -5, "max": -0.5, "step": 0.5 },
+      "rise_time": { "min": 0.05, "max": 0.5, "step": 0.05 }
+    },
+    "baseline_state": "pcv_posop_baseline",
+    "waveform_states": [
+      {
+        "state_key": "pcv_posop_baseline",
+        "priority": 1,
+        "conditions": { "pinsp": [12, 16], "rise_time": [0.1, 0.2] },
+        "pressure_asset": "wave_pressure_pcv_posop_baseline",
+        "flow_asset": "wave_flow_pcv_posop_baseline",
+        "volume_asset": "wave_volume_pcv_posop_baseline",
+        "interpretation": "Padrao didatico de ventilacao controlada a pressao com pressurizacao adequada.",
+        "suspected_asynchrony": null
+      },
+      {
+        "state_key": "pcv_posop_short_rise_discomfort_like",
+        "priority": 9,
+        "conditions": { "rise_time": [0.05, 0.1] },
+        "pressure_asset": "wave_pressure_pcv_posop_short_rise_discomfort_like",
+        "flow_asset": "wave_flow_pcv_posop_short_rise_discomfort_like",
+        "volume_asset": "wave_volume_pcv_posop_short_rise_discomfort_like",
+        "interpretation": "Padrao didatico de pressurizacao muito abrupta, potencialmente desconfortavel.",
+        "suspected_asynchrony": null
+      },
+      {
+        "state_key": "pcv_posop_delayed_pressurization_like",
+        "priority": 8,
+        "conditions": { "rise_time": [0.25, 0.5] },
+        "pressure_asset": "wave_pressure_pcv_posop_delayed_pressurization_like",
+        "flow_asset": "wave_flow_pcv_posop_delayed_pressurization_like",
+        "volume_asset": "wave_volume_pcv_posop_delayed_pressurization_like",
+        "interpretation": "Padrao didatico de pressurizacao lenta, com possivel sensacao de oferta insuficiente.",
+        "suspected_asynchrony": "flow_starvation"
+      }
+    ]
+  },
+  {
+    "id": "profile_sepse_vcv_v1",
+    "mode": "VCV",
+    "scenario_category": "Sepse",
+    "parameter_ranges": {
+      "fr": { "min": 10, "max": 30, "step": 1 },
+      "vt": { "min": 300, "max": 550, "step": 10 },
+      "peep": { "min": 5, "max": 12, "step": 1 },
+      "fio2": { "min": 0.21, "max": 1.0, "step": 0.01 },
+      "trigger": { "min": -5, "max": -0.5, "step": 0.5 }
+    },
+    "baseline_state": "vcv_sepse_baseline",
+    "waveform_states": [
+      {
+        "state_key": "vcv_sepse_baseline",
+        "priority": 1,
+        "conditions": { "vt": [340, 430], "peep": [6, 9] },
+        "pressure_asset": "wave_pressure_vcv_sepse_baseline",
+        "flow_asset": "wave_flow_vcv_sepse_baseline",
+        "volume_asset": "wave_volume_vcv_sepse_baseline",
+        "interpretation": "Padrao didatico de estrategia controlada inicial com foco em reavaliacao.",
+        "suspected_asynchrony": null
+      },
+      {
+        "state_key": "vcv_sepse_high_drive_like",
+        "priority": 8,
+        "conditions": { "fr": [24, 30], "trigger": [-2, -0.5] },
+        "pressure_asset": "wave_pressure_vcv_sepse_high_drive_like",
+        "flow_asset": "wave_flow_vcv_sepse_high_drive_like",
+        "volume_asset": "wave_volume_vcv_sepse_high_drive_like",
+        "interpretation": "Padrao didatico de maior drive respiratorio com potencial desconforto.",
+        "suspected_asynchrony": "flow_starvation"
+      }
+    ]
+  },
+  {
+    "id": "profile_rebaixamento_vcv_v1",
+    "mode": "VCV",
+    "scenario_category": "Rebaixamento de consciencia",
+    "parameter_ranges": {
+      "fr": { "min": 10, "max": 24, "step": 1 },
+      "vt": { "min": 300, "max": 500, "step": 10 },
+      "peep": { "min": 5, "max": 10, "step": 1 },
+      "fio2": { "min": 0.21, "max": 1.0, "step": 0.01 },
+      "trigger": { "min": -5, "max": -0.5, "step": 0.5 }
+    },
+    "baseline_state": "vcv_rebaixamento_baseline",
+    "waveform_states": [
+      {
+        "state_key": "vcv_rebaixamento_baseline",
+        "priority": 1,
+        "conditions": { "vt": [340, 420], "peep": [5, 6] },
+        "pressure_asset": "wave_pressure_vcv_rebaixamento_baseline",
+        "flow_asset": "wave_flow_vcv_rebaixamento_baseline",
+        "volume_asset": "wave_volume_vcv_rebaixamento_baseline",
+        "interpretation": "Padrao didatico basal para configuracao inicial simples em ventilacao controlada.",
+        "suspected_asynchrony": null
+      },
+      {
+        "state_key": "vcv_rebaixamento_high_vt",
+        "priority": 6,
+        "conditions": { "vt": [430, 500] },
+        "pressure_asset": "wave_pressure_vcv_rebaixamento_high_vt",
+        "flow_asset": "wave_flow_vcv_rebaixamento_high_vt",
+        "volume_asset": "wave_volume_vcv_rebaixamento_high_vt",
+        "interpretation": "Padrao didatico de volume acima do alvo simples proposto para o cenario.",
+        "suspected_asynchrony": null
+      }
+    ]
+  }
+]

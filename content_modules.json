@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ajuste_inicial",
+    "title": "Ajuste Inicial",
+    "description": "Parametros iniciais didaticos em cenarios selecionados.",
+    "order": 1,
+    "is_active": true,
+    "version": "1.0.0"
+  },
+  {
+    "id": "assincronias",
+    "title": "Assincronias",
+    "description": "Biblioteca educacional de assincronias paciente ventilador.",
+    "order": 2,
+    "is_active": true,
+    "version": "1.0.0"
+  },
+  {
+    "id": "simulador",
+    "title": "Simulador",
+    "description": "Simulador didatico por estados para VCV, PCV e PSV.",
+    "order": 3,
+    "is_active": true,
+    "version": "1.0.0"
+  },
+  {
+    "id": "casos_quiz",
+    "title": "Casos e Quiz",
+    "description": "Casos comentados para treino de reconhecimento de curvas e assincronias.",
+    "order": 4,
+    "is_active": true,
+    "version": "1.0.0"
+  }
+]

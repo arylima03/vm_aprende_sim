@@ -117,19 +117,22 @@ class SimulatorPage extends ConsumerWidget {
           children: [
             const Text('Tipo ventilatorio'),
             const SizedBox(height: 8),
-            SegmentedButton<VentilationType>(
-              segments: const [
-                ButtonSegment(
+            DropdownButtonFormField<VentilationType>(
+              value: state.type,
+              decoration: const InputDecoration(border: OutlineInputBorder()),
+              items: const [
+                DropdownMenuItem(
                   value: VentilationType.invasive,
-                  label: Text('VMI'),
+                  child: Text('VMI'),
                 ),
-                ButtonSegment(
+                DropdownMenuItem(
                   value: VentilationType.nonInvasive,
-                  label: Text('VNI'),
+                  child: Text('VNI'),
                 ),
               ],
-              selected: {state.type},
-              onSelectionChanged: (value) => controller.setType(value.first),
+              onChanged: (value) {
+                if (value != null) controller.setType(value);
+              },
             ),
           ],
         ),
@@ -146,14 +149,17 @@ class SimulatorPage extends ConsumerWidget {
           children: [
             const Text('Modo ventilatorio'),
             const SizedBox(height: 8),
-            SegmentedButton<VentilationMode>(
-              segments: const [
-                ButtonSegment(value: VentilationMode.vcv, label: Text('VCV')),
-                ButtonSegment(value: VentilationMode.pcv, label: Text('PCV')),
-                ButtonSegment(value: VentilationMode.psv, label: Text('PSV')),
+            DropdownButtonFormField<VentilationMode>(
+              value: state.mode,
+              decoration: const InputDecoration(border: OutlineInputBorder()),
+              items: const [
+                DropdownMenuItem(value: VentilationMode.vcv, child: Text('VCV')),
+                DropdownMenuItem(value: VentilationMode.pcv, child: Text('PCV')),
+                DropdownMenuItem(value: VentilationMode.psv, child: Text('PSV')),
               ],
-              selected: {state.mode},
-              onSelectionChanged: (value) => controller.setMode(value.first),
+              onChanged: (value) {
+                if (value != null) controller.setMode(value);
+              },
             ),
           ],
         ),

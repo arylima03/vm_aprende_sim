@@ -1,0 +1,9 @@
+{
+  "name": "VentEdu Sync",
+  "short_name": "VentEdu",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "description": "Aplicativo educacional e simulador de ventilacao mecanica."
+}
